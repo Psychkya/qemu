@@ -1,0 +1,17 @@
+http://blog.3mdeb.com/2015/12/30/emulate-rapberry-pi-2-in-qemu/
+This emulation is rpi 2 which uses a broadcom board and a cortex arm processor. Interestingly, the author says that qemu 'requires' kernel 
+and is extracting it from the image
+
+https://github.com/0xabu/qemu/wiki
+Not sure what windows 10 IoT is - need to figure that out. But it appears that -bios option is available when using qemu from a windows system (?) Looks like linux uses
+-kernel. At any rate, this doc seems to indicate that the bootloader is UEFI
+
+http://elinux.org/RPi_U-Boot
+Perhaps we can use u-boot on top of the bootloader that comes with raspbian
+
+https://plus.google.com/u/0/+StephenWarren/posts/G1sJ1RD4qPr?cfem=1
+Looks like -bios option needed to use u-boot
+
+
+https://github.com/0xabu/qemu
+Also found some tid-bits that u-boot may not work with the main qemu repo. Need this modified repo and compile qemu for it to work.
